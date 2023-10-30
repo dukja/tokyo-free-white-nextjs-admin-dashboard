@@ -825,16 +825,9 @@ export const PureLightTheme = createTheme({
     MuiTabs: {
       styleOverrides: {
         root: {
-          height: 38,
-          minHeight: 38,
+          height: 48,
+          minHeight: 48,
           overflow: 'visible'
-        },
-        indicator: {
-          height: 38,
-          minHeight: 38,
-          borderRadius: 6,
-          border: '1px solid ' + colors.primary.dark,
-          boxShadow: '0px 2px 10px ' + colors.primary.light
         },
         scrollableX: {
           overflow: 'visible !important'
@@ -845,8 +838,8 @@ export const PureLightTheme = createTheme({
       styleOverrides: {
         root: {
           padding: 0,
-          height: 38,
-          minHeight: 38,
+          height: 48,
+          minHeight: 48,
           borderRadius: 6,
           transition: 'color .2s',
           textTransform: 'capitalize',
@@ -857,10 +850,7 @@ export const PureLightTheme = createTheme({
             paddingRight: 20,
             marginRight: 4
           },
-          '&.Mui-selected, &.Mui-selected:hover': {
-            color: colors.alpha.white[100],
-            zIndex: 5
-          },
+
           '&:hover': {
             color: colors.alpha.black[100]
           }

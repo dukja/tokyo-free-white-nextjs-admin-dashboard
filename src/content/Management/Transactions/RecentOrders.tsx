@@ -1,4 +1,4 @@
-import { Card } from '@mui/material';
+import { Card,styled } from '@mui/material';
 import { CryptoOrder } from '@/models/crypto_order';
 import RecentOrdersTable from './RecentOrdersTable';
 import { subDays } from 'date-fns';
@@ -136,11 +136,8 @@ function RecentOrders() {
       currency: '$'
     }
   ];
-
   return (
-    <Card >
       <RecentOrdersTable cryptoOrders={cryptoOrders} />
-    </Card>
   );
 }
 

@@ -12,7 +12,8 @@ import {
   Container,
   Stack,
   Tabs,
-  Tab
+  Tab,
+  styled
 } from '@mui/material';
 import {useState,SyntheticEvent} from 'react';
 import Footer from '@/components/Footer';
@@ -37,7 +38,7 @@ function TabPanel(props: TabPanelProps) {
       {...other}
     >
       {value === index && (
-        <Box sx={{ p: 3 }}>
+        <Box>
           <Typography>{children}</Typography>
         </Box>
       )}
@@ -119,6 +120,11 @@ function SettingTable() {
   const handleChange = (_event: SyntheticEvent, newValue: number) => {
     setValue(newValue);
   };
+  const CardRe= styled(Card)(
+    ({ theme }) => `
+       padding:${theme.spacing(0)};
+  `
+  );
   return (
     <>
       <Container maxWidth="xxl">
@@ -126,20 +132,24 @@ function SettingTable() {
           <Settings/>
           <Grid item xs={12}>
             <Card>
-              <CardContent >
-                <Tabs
-                  variant="scrollable"
-                  scrollButtons="auto"
-                  textColor="primary"
-                  indicatorColor="primary"
-                  value={value}
-                  onChange={handleChange}
-                  aria-label="basic tabs example"
-                >
-                  <Tab label="Item One" {...a11yProps(0)} />
-                  <Tab label="Item Two" {...a11yProps(1)} />
-                  <Tab label="Item Three" {...a11yProps(2)} />
-                </Tabs>
+              <CardRe>
+                
+                <Box pt={2} pl={3} pr={3}>
+                  <Tabs
+                    variant="scrollable"
+                    scrollButtons="auto"
+                    textColor="primary"
+                    indicatorColor="primary"
+                    value={value}
+                    onChange={handleChange}
+                    aria-label="basic tabs example"
+
+                  >
+                    <Tab label="Item One" {...a11yProps(0)} />
+                    <Tab label="Item Two" {...a11yProps(1)} />
+                    <Tab label="Item Three" {...a11yProps(2)} />
+                  </Tabs>                  
+                </Box>
                 <TabPanel value={value} index={0}>
                   <RecentOrders />
                 </TabPanel>
@@ -149,7 +159,7 @@ function SettingTable() {
                 <TabPanel value={value} index={2}>
                   Item Three
                 </TabPanel>
-              </CardContent>
+              </CardRe>
             </Card>
           </Grid>
         </Grid>
