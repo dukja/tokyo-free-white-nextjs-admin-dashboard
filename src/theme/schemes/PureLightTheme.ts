@@ -1,6 +1,5 @@
 import { alpha, createTheme, lighten, darken } from '@mui/material';
 import '@mui/lab/themeAugmentation';
-
 // import i18n from 'src/i18n/i18n';
 
 const themeColors = {
@@ -245,12 +244,12 @@ export const PureLightTheme = createTheme({
     width: '290px'
   },
   header: {
-    height: '80px',
+    height: '64px',
     background: colors.alpha.white[100],
     boxShadow: colors.shadows.cardSm,
     textColor: colors.secondary.main
   },
-  spacing: 9,
+  spacing: [0, 4, 8, 16, 24, 32, 64],
   palette: {
     common: {
       black: colors.alpha.black[100],
@@ -319,9 +318,11 @@ export const PureLightTheme = createTheme({
     values: {
       xs: 0,
       sm: 600,
-      md: 960,
-      lg: 1280,
-      xl: 1840
+      md: 900,
+      lg: 1200,
+      xl: 1536,
+      xxl: 1920,
+      fluid: 2560
     }
   },
   components: {
@@ -466,7 +467,11 @@ export const PureLightTheme = createTheme({
           '&.Mui-focused:hover .MuiOutlinedInput-notchedOutline': {
             borderColor: colors.primary.main
           }
-        }
+        },
+        input: {
+          padding: '8px 12px',
+          height:'20px',
+        },
       }
     },
     MuiListSubheader: {
@@ -1167,7 +1172,7 @@ export const PureLightTheme = createTheme({
   },
   typography: {
     fontFamily:
-      '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"',
+    '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"',
     h1: {
       fontWeight: 700,
       fontSize: 35

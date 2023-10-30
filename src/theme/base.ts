@@ -249,7 +249,12 @@ declare module '@mui/material/styles' {
     };
   }
 }
-
+declare module '@mui/material/styles' {
+  interface BreakpointOverrides {
+    xxl: true;
+    fluid: true;
+  }
+}
 const themeMap: { [key: string]: Theme } = {
   PureLightTheme,
   GreyGooseTheme,

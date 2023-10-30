@@ -62,7 +62,7 @@ function Header() {
               )}`
       }}
     >
-      <Stack
+      {/* <Stack
         direction="row"
         divider={<Divider orientation="vertical" flexItem />}
         alignItems="center"
@@ -90,7 +90,7 @@ function Header() {
             </IconButton>
           </Tooltip>
         </Box>
-      </Box>
+      </Box> */}
     </HeaderWrapper>
   );
 }
