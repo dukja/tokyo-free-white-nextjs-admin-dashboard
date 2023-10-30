@@ -18,6 +18,7 @@ import {useState,SyntheticEvent} from 'react';
 import Footer from '@/components/Footer';
 import Text from '@/components/Text';
 import RecentOrders from '@/content/Management/Transactions/RecentOrders';
+import { Padding } from '@mui/icons-material';
 interface TabPanelProps {
   children?: React.ReactNode;
   index: number;
@@ -125,30 +126,30 @@ function SettingTable() {
           <Settings/>
           <Grid item xs={12}>
             <Card>
-            <CardContent>
-              <Tabs
-                variant="scrollable"
-                scrollButtons="auto"
-                textColor="primary"
-                indicatorColor="primary"
-                value={value}
-                onChange={handleChange}
-                aria-label="basic tabs example"
-              >
-                <Tab label="Item One" {...a11yProps(0)} />
-                <Tab label="Item Two" {...a11yProps(1)} />
-                <Tab label="Item Three" {...a11yProps(2)} />
-              </Tabs>
-              <TabPanel value={value} index={0}>
-              <RecentOrders />
-              </TabPanel>
-              <TabPanel value={value} index={1}>
-                Item Two
-              </TabPanel>
-              <TabPanel value={value} index={2}>
-                Item Three
-              </TabPanel>
-            </CardContent>
+              <CardContent >
+                <Tabs
+                  variant="scrollable"
+                  scrollButtons="auto"
+                  textColor="primary"
+                  indicatorColor="primary"
+                  value={value}
+                  onChange={handleChange}
+                  aria-label="basic tabs example"
+                >
+                  <Tab label="Item One" {...a11yProps(0)} />
+                  <Tab label="Item Two" {...a11yProps(1)} />
+                  <Tab label="Item Three" {...a11yProps(2)} />
+                </Tabs>
+                <TabPanel value={value} index={0}>
+                  <RecentOrders />
+                </TabPanel>
+                <TabPanel value={value} index={1}>
+                  Item Two
+                </TabPanel>
+                <TabPanel value={value} index={2}>
+                  Item Three
+                </TabPanel>
+              </CardContent>
             </Card>
           </Grid>
         </Grid>

@@ -138,7 +138,7 @@ function RecentOrders() {
   ];
 
   return (
-    <Card>
+    <Card >
       <RecentOrdersTable cryptoOrders={cryptoOrders} />
     </Card>
   );
